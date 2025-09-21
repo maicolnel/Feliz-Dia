@@ -25,31 +25,45 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: white;
   position: absolute;
-  margin-bottom: 20%;
-  z-index: 1;
+  top: 10%; /* Cambiado de margin-bottom a top */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
   font-weight: bold;
   letter-spacing: 4px;
+  text-align: center;
+  width: 90vw;
 }
 @media only screen and (max-width: 600px) {
-  /* Estilos específicos para dispositivos con un ancho máximo de 600px */
   #lyrics {
-      font-size: 14px; /* Reduce el tamaño del texto para dispositivos más pequeños */
-      margin-bottom: 530px;
-      letter-spacing: 3px;
+    font-size: 14px;
+    top: 5%; /* Más arriba en móviles */
+    letter-spacing: 3px;
+    width: 96vw;
   }
-
 }
+
 .titulo {
-  margin-bottom: 180px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: rgb(221, 15, 204);
   position: absolute;
+  top: 5%; /* Anteriormente margin-bottom */
+  left: 50%;
+  transform: translateX(-50%);
   font-weight: bold;
-  letter-spacing: 10px;
+  letter-spacing: 1px;
   opacity: 0;
   animation: fadeIn 3s ease-in-out forwards;
   text-align: center;
+  width: 90vw;
 }
+@media only screen and (max-width: 600px) {
+  .titulo {
+    font-size: 16px;
+    top: 3%; /* Más arriba en móviles */
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
